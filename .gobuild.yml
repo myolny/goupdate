@@ -1,0 +1,16 @@
+author: "shiyj.cn@gmail.com"
+description: "dz-wx-test"
+filesets:
+  includes:
+  - conf
+  - static
+  - views
+  - index.html
+  excludes:
+  - \.git
+  - .*\.go
+  depth: 3
+settings:
+  targetdir: ""
+  outfiles: []
+  build: test -d Godeps && go(){ godep go "$@";} ; go install -v
